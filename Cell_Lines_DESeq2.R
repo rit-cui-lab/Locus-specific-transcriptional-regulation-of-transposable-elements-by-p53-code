@@ -1,4 +1,4 @@
-#DEseq2 differential anyalisis different fold increases were also compared we would eventually decide to use fold increase of 0.
+#DEseq2 differential anyalisis different fold increases were also compared. We would eventually decide to use fold increase of 0.
 
 
 library("DESeq2")
@@ -14,7 +14,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/IMR90/DESeq2")
 #control
 #Comparison by Control
 
-samples<-read.table("hr12_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("hr12_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -86,7 +86,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/HCT116/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("hr12_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("hr12_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -163,7 +163,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/IMR90/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("hr6_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("hr6_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -235,7 +235,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/HCT116/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("hr6_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("hr6_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -313,7 +313,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/HCT116/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -372,7 +372,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/IMR90/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("total_control_sample_table.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("total_control_sample_table.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -469,8 +469,8 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/other_cell_lines/DESeq
 
 #Saos-2
 
-samples<-read.table("Saos-2_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
-dds <- DESeqDataSetFromMatrix(countData =Saos , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
+samples<-read.table("Saos-2_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
+dds <- DESeqDataSetFromMatrix(countData =Saos , colData = samples, design = ~ condition) #Saves the data, sample table, and design of the DESeq2 comparison we used. condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
 
@@ -511,7 +511,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #GM06170
 
-samples<-read.table("GM06170_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("GM06170_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =GM06170 , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -554,7 +554,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #GM00011
 
-samples<-read.table("GM00011_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("GM00011_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =GM00011 , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -597,7 +597,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #MCF7_GSE47042
 
-samples<-read.table("MCF7_GSE47042_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )#Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("MCF7_GSE47042_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )#Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =MCF7_GSE47042 , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -639,7 +639,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #A549
 
-samples<-read.table("A549_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("A549_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =A549 , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -682,8 +682,8 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #Fibro
 
-samples<-read.table("Fibro_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
-dds <- DESeqDataSetFromMatrix(countData =Fibro , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
+samples<-read.table("Fibro_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
+dds <- DESeqDataSetFromMatrix(countData =Fibro , colData = samples, design = ~ condition) #Saves the data, sample table, and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
 
@@ -724,7 +724,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #MCF10A
 
-samples<-read.table("MCF10A_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("MCF10A_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =MCF10A , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -767,7 +767,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #MCF7_GSE86221
 
-samples<-read.table("MCF7_GSE86221_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("MCF7_GSE86221_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =MCF7_GSE86221 , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -811,8 +811,8 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 #SJSA
 
-samples<-read.table("SJSA_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
-dds <- DESeqDataSetFromMatrix(countData =SJSA , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
+samples<-read.table("SJSA_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specificic version of DESeq2 being used
+dds <- DESeqDataSetFromMatrix(countData =SJSA , colData = samples, design = ~ condition) #Saves the data, sample table, and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
 
@@ -864,7 +864,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/HCT116/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -925,7 +925,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/IMR90/DESeq2")
 
 #control
 #Comparison by Control
-samples<-read.table("total_control_sample_table.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("total_control_sample_table.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1009,7 +1009,7 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/other_cell_lines")
 
 filter<-read.table("MV4_11_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/MV4_11_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/MV4_11_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1055,7 +1055,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 filter<-read.table("PAEC_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/PAEC_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/PAEC_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1100,7 +1100,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 filter<-read.table("PAEC_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/PAEC_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/PAEC_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specificic version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1145,7 +1145,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 filter<-read.table("IMR90_GSE139003_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/IMR90_GSE139003_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/IMR90_GSE139003_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1193,7 +1193,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 filter<-read.table("MCF10A_hr4_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/MCF10A_hr4_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/MCF10A_hr4_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1240,7 +1240,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 filter<-read.table("hNCCs_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/hNCCs_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/hNCCs_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1284,7 +1284,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 #hSMCs
 filter<-read.table("hSMCs_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 
-samples<-read.table("DESeq2/hSMCs_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/hSMCs_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1329,7 +1329,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 
 filter<-read.table("A431_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
-samples<-read.table("DESeq2/A431_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/A431_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1376,7 +1376,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 filter<-read.table("M231_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 names(filter)<-c("con_1","con_2","con_3","5_FU_1","5_FU_2", "5_FU_3")
 
-samples<-read.table("DESeq2/M231_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/M231_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1426,7 +1426,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 filter<-read.table("SJSA_GSE89807_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 names(filter)<-c("DMSO_1","DMSO_2","5_FU_1","5_FU_2" )
 
-samples<-read.table("DESeq2/SJSA_GSE89807_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/SJSA_GSE89807_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1476,7 +1476,7 @@ temp<-data.frame("FC"=vals,"p_values"=p_vals,"padj"=F_vals)
 filter<-read.table("MRC5_filter.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Table of combined telescope samples that have been filtered
 
 
-samples<-read.table("DESeq2/MRC5_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/MRC5_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData =filter , colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
@@ -1532,7 +1532,7 @@ filter<-read.table("IMR90_hr24_5_FU_time_course_filter.csv", header=TRUE, sep=',
 
 #control
 #Comparison by Control
-samples<-read.table("DESeq2/hr24_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to following the specificic version of DESeq2 being used
+samples<-read.table("DESeq2/hr24_table_samples.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Sample table indicating the controls and treatments needs to follow the specific version of DESeq2 being used
 dds <- DESeqDataSetFromMatrix(countData = filter, colData = samples, design = ~ condition) #Saves the data, sample table and design of the DESeq2 comparison we used condition DESeqDataSet object.
 dds <- DESeq(dds) #Run DESeq2 differential anyalisis on prepped DESeqDataSet object.
 
