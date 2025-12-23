@@ -8,13 +8,13 @@ setwd("C:/Users/[USER NAME]/Documents/[LOCATION ON DRIVE]/telescope")
 UTR<-read.table("overlaps/UCSC_UTR.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #UTR data from USC genome browser
 full_gene<-read.table("overlaps/UCSC_exons_introns.csv", header=TRUE, sep=',', stringsAsFactors=FALSE ) #Genomic data from USC genome browser
 
-#occurance 2
+# occurrence 2
 
 FC_0_occur_2<-read.table("data_sets_locs/padj_0.05_FC_0_occur_2.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 FC_1_occur_2<-read.table("data_sets_locs/padj_0.05_FC_1_occur_2.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 FC_2_occur_2<-read.table("data_sets_locs/padj_0.05_FC_2_occur_2.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 
-#occurance 3
+# occurrence 3
 FC_0_occur_3<-read.table("data_sets_locs/padj_0.05_FC_0_occur_3.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 FC_1_occur_3<-read.table("data_sets_locs/padj_0.05_FC_1_occur_3.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 FC_2_occur_3<-read.table("data_sets_locs/padj_0.05_FC_2_occur_3.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
@@ -33,7 +33,7 @@ FC_1_occur_3_gr<-GRanges(seqnames = Rle(FC_1_occur_3$chr), ranges=IRanges(start=
 FC_2_occur_3_gr<-GRanges(seqnames = Rle(FC_2_occur_3$chr), ranges=IRanges(start=FC_2_occur_3$start, end = FC_2_occur_3$end, names = FC_2_occur_3$RE), strand = NULL)
 
 
-#FC 0 occurence 2
+#FC 0 occurrence 2
 hits <- findOverlaps(FC_0_occur_2_gr, UTR_gr) #Find the overlaps between two GenomicRanges objects
 overlaps_FC_0_occur_2 <- FC_0_occur_2_gr[queryHits(hits)] #where the query hits overlap 
 overlaps_UTR<-UTR_gr[subjectHits(hits)] #where the subject hits overlap
@@ -96,7 +96,7 @@ no_overlap<-cbind(no_overlap, "strand"=NA)
 
 write.table(no_overlap, "overlaps/FC_0_occur_2_no_overlap_REs.csv", sep=',', row.names = F, col.names = T, quote = F)
 
-#FC 0 occurence 3
+#FC 0 occurrence 3
 hits <- findOverlaps(FC_0_occur_3_gr, UTR_gr) #Find the overlaps between two GenomicRanges objects
 overlaps_FC_0_occur_3 <- FC_0_occur_3_gr[queryHits(hits)] #where the query hits overlap
 overlaps_UTR<-UTR_gr[subjectHits(hits)] #where the subject hits overlap
@@ -348,7 +348,7 @@ no_overlap<-cbind(no_overlap, "strand"=NA)
 write.table(no_overlap, "overlaps/FC_2_occur_2_no_overlap_REs.csv", sep=',', row.names = F, col.names = T, quote = F) #write overlap data
 
 
-#FC 2 occurence 3
+#FC 2 occurrence 3
 hits <- findOverlaps(FC_2_occur_3_gr, UTR_gr) #Find the overlaps between two GenomicRanges objects
 overlaps_FC_2_occur_3 <- FC_2_occur_3_gr[queryHits(hits)] #where the query hits overlap
 overlaps_UTR<-UTR_gr[subjectHits(hits)] #where the subject hits overlap
