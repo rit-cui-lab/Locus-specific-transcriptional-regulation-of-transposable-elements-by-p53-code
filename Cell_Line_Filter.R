@@ -263,7 +263,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -355,7 +355,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht the counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -398,7 +398,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -601,7 +601,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht the counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -804,7 +804,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -890,7 +890,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -1005,7 +1005,7 @@ final<-subset(final, row.names(final)!="__no_feature") #remove the "__no_feature
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -1018,7 +1018,7 @@ final<-final[,c("DMSO_1", "DMSO_2", "Nutlin_1", "Nutlin_2")]
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final_temp <- final[keep,]
 
 
@@ -1175,7 +1175,7 @@ final<-subset(final, row.names(final)!="__no_feature")
 keep <- rowSums(cpm(final) > 5) >= 4 #Selection five counts per million at least four times
 table(keep)
 
-#subset the counts matrix witht he counts to keep list
+#subset the counts matrix with the counts to keep list
 final <- final[keep,]
 
 write.table(final, "HCT116_hr6_5_FU_time_course_filter.csv", sep=',', row.names = T, col.names = T, quote = F)
