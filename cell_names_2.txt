@@ -1,0 +1,6 @@
+HCT116_GSE158021_5_FU_min30_1_1
+HCT116_GSE158021_5_FU_min30_1_2
+A431_untreated_1_1
+A431_untreated_1_2
+A431_untreated_1_3
+A431_Dox_1_1
