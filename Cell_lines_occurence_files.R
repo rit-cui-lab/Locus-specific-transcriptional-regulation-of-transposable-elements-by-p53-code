@@ -1,4 +1,4 @@
-#all RE occurance
+#all RE occurrences
 
 library(VennDiagram)
 
@@ -54,7 +54,7 @@ SJSA_GSE89807_padj<-read.table("other_cell_lines/DESeq2/SJSA_GSE89807_DMSO_treat
 MRC5_padj<-read.table("other_cell_lines/DESeq2/MRC5_control_treatment_padj_0.05.csv", header=TRUE, sep=',', stringsAsFactors=FALSE )
 
 
-#merge together different FC option with padj or less results into one file
+#merge together different FC options with padj or less results into one file
 #one row per cell line.
 #padj
 
